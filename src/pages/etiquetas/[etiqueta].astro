@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  return [
+    { params: { etiqueta: "astro" } },
+    { params: { etiqueta: "successes" } },
+    { params: { etiqueta: "community" } },
+    { params: { etiqueta: "blogging" } },
+    { params: { etiqueta: "setbacks" } },
+    { params: { etiqueta: "learning in public" } },
+  ];
+}
+
+const { etiqueta } = Astro.params;
+---
+<BaseLayout pageTitle={etiqueta}>
+  <p>etiquetas permitidas {etiqueta}</p>
+</BaseLayout>

@@ -1,8 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "enfocados 2025";
+const tags = ['astro', 'blogging', 'learning in public', 'successes', 'setbacks', 'community']
+import Greeting from '../components/Greeting';
+
+
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <h2>abadakadabra</h2>
-  <h3>no seeeeeeeeee</h3>
+  <ul>
+    {tags.map((tag) => <li>{tag}</li>)}
+  </ul>
+  <Greeting messages={["Hi", "Hello", "Howdy", "Hey there"]} />
+  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 </BaseLayout>

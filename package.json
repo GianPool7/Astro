@@ -9,7 +9,10 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/preact": "^4.0.0",
+    "@astrojs/rss": "^4.0.10",
     "astro": "^5.0.6",
-    "orbital-orbit": "file:"
+    "orbital-orbit": "file:",
+    "preact": "^10.25.3"
   }
 }
